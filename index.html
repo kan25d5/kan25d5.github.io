@@ -1,145 +1,439 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
+<head data-bs-theme="dark">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css\style.css">
-    <title>yoshikanのホームページ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+            crossorigin = "anonymous" ></script>
+    <link href="jquery-css-skills-bar/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-css-skills-bar/js/jquery-2.1.4.min.js"></script>
+    <script src="jquery-css-skills-bar/js/skill.bars.jquery.js"></script>
+    <title>ヨシカンのポートフォリオサイト</title>
+
+    <script>
+            $(document).ready(function () {
+
+                $('.skillbar').skillBars({
+                    from: 0,
+                    speed: 4000,
+                    interval: 100,
+                    decimals: 0,
+                });
+
+            });
+    </script>
 </head>
 
 <body>
-    <!-- ヘッダー -->
-    <div id="header">
-        <p class="blong">
-            北陸先端科学技術大学院大学 先端科学技術研究科 前期博士課程 在籍<br />
-            先端科学技術専攻 情報科学系 ゲーム・エンターテインメント領域 白井研究室 所属
-        </p>
-        <p class="name">yoshikan's home page</p>
-    </div>
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- メイン -->
-    <div id="main">
-        <h1>自己紹介</h1>
-        <p>本名：吉田 寛太（よしだ かんた）</p>
-        <p>北陸先端科学技術大学院大学 先端科学技術研究科 博士前期課程（修士課程） 在学．</p>
-        <p>大学院にて自然言語処理を専攻し、自由対話システム（いわゆる「雑談チャットボット」）の分野について研究しています．<br>
-            具体的には「対話システム応答の個性と一貫性」についての研究をしており，現在はtransformsを使ったシステム応答の個性表現についての研究を進めています．</p>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top">トップ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile">自己紹介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">ポートフォリオ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skill">スキル</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#document">資料</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#career">経歴</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#links">リンク</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <h1>学歴</h1>
-        <ul>
-            <li>2017年4月　神奈川工科大学 情報学部 情報工学科　入学</li>
-            <li>2021年3月　神奈川工科大学 情報学部 情報工学科　卒業</li>
-            <li>2021年4月　北陸先端科学技術大学院大学 先端科学技術研究科 先端科学専攻 博士前期課程 入学</li>
-        </ul>
-        <p>現在，北陸先端科学技術大学院大学 先端科学技術研究科 先端科学技術専攻 情報科学系 白井研究室 所属</p>
+    <section id="top" class="card my-5 text-white border border-0">
+        <img src="images\sindy-sussengut-j_WbojwKSys-unsplash.jpg">
+        <div class="card-img-overlay d-flex flex-column-reverse">
+            <p class="card-text fs-4">
+                programmer, engineer, AI researcher, game developer, <br />
+                and jerries...
+            </p>
+        </div>
+    </section>
 
-        <h1>関心・スキル</h1>
-        <h2>プログラミング</h2>
-        <ul>
-            <li>
-                <b>Python</b><br>
-                開発経験４年程度．主に対話システム開発，データ分析，Webサイトクローリング，深層学習モデルの実装で利用．
-            </li>
-            <li>
-                <b>C#</b><br>
-                開発経験２～３年程度．主にUnityゲーム開発，Windowsアプリケーション開発での利用経験あり．
-            </li>
-            <li>
-                <b>C/C++</b>，<b>Java</b>，<b>Processing</b>，<b>MATLAB</b>，<b>HTML</b>，<b>javascript</b><br>
-                開発経験１年程度～大学の講義で使用経験あり．簡単なアプリケーション開発が出来る程度．
-            </li>
-        </ul>
+    <main id="MainContainer" class="container-sm mt-5 p-2 px-md-5">
+        <section id="portfolio" class="my-3">
+            <h2>自己紹介</h2>
+            <hr>
+            <div class="row">
+                <div class="col-lg-3 p-2">
+                    <img src="watatumi\images\O4R_307S_400x400.jpg">
+                    <p></p>
+                    <p>アイコンイラスト<br><a href="https://twitter.com/hs_fanta">山吉ファン太</a>先生</p>
+                </div>
+                <div class="col-lg-9 p-2">
+                    <h2 class="pb-2">ヨシカン</h2>
+                    <p>専門：</p>
+                    <ul>
+                        <li>自由対話システム</li>
+                        <li>自然言語処理応用（情報検索，マルチモーデルモデル応用，質問応答システム）</li>
+                        <li>自主制作ゲーム</li>
+                    </ul>
+                    <p>
+                        北陸先端科学技術大学院大学 先端科学技術研究科 先端科学技術専攻 白井研究室所属<br>
+                        フリービット株式会社NN技術本部R&D部門　アルバイト
+                    </p>
+                </div>
 
-        <h2>ライブラリ</h2>
-        <p>PyTorch，scikit-learn，pandas，NumPy，MeCab，CaboCha，Unity，WPF，prism</p>
+            </div>
+        </section>
 
-        <h2>関心のある領域</h2>
-        <ul>
-            <li>自然言語処理全般</li>
-            <li>対話システム</li>
-            <li>自由対話システム</li>
-            <li>コミュニケーション可能な存在としてのキャラクターの具現化</li>
-        </ul>
+        <section id="portfolio">
+            <h2 class="text-sm-star">ポートフォリオ</h2>
+            <hr>
 
-        <h2>趣味</h2>
-        <p> ゲーム，ゲーム開発，TV番組（主にバラエティ），ラジオ，お笑い，Youtube，バーチャルYoutuber，ロック，HIPHOP，サイクリング...など </p>
+            <article>
+                <h3>同人活動</h3>
+                <div class="card my-3 mx-4 p-3">
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <img src="watatumi\images\watatsumi.png" alt="" class="card-img-left">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body row">
+                                <h4 class="card-title">わたつみプロダクション</h4>
+                                <p class="card-text">
+                                    自主制作ゲームの制作・販売などを行う <span class="fw-bold">ゲーム制作プロジェクト</span>と
+                                    言語コミュニケーション可能な存在としてのキャラクター具現化を目指し、人工知能を搭載したNPC研究開発を行う<span
+                                        class="fw-bold">キャラクターAI研究開発プロジェクトプロジェクト</span>の活動を行っています．
+                                </p>
+                                <p>
+                                    <!-- <a href="watatumi\index.html">http://kan25d5.github.io/watatumi/index.html</a> -->
+                                    公開準備中...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3>クリエイティブ</h3>
+                <ul>
+                    <li>同人サークル「わたつみプロダクション」ホームページ制作・実装（デザイン：<a href="https://twitter.com/xxmjtj">@xxmjtj</a>）</li>
+                    <li>ポートフォリオサイトサイト</li>
+                </ul>
+            </article>
+            <article>
+                <h3>リポジトリ</h3>
+                <ul>
+                    <li>
+                        <p class="fw-bold">seq2seq-chatbot-torch</p>
+                        <p>
+                            Transformerを用いたテキスト応答生成モデル．
+                            Twitterの発話から応答を予測するSeq2Seqモデル ．
+                        </p>
+                    </li>
+                    <li>
+                        <p class="fw-bold">AyanoDiscordChatbot</p>
+                        <p>
+                            学部3年頃に開発したDiscord用のチャットボット．
+                            SVMによってユーザーの対話行為を推定し，応答を選択する．
+                        </p>
+                    </li>
+                    <li>
+                        <p class="fw-bold">e-Books　（公開予定）</p>
+                        <p>
+                            JAIST副テーマ研究で取り組んだプロジェクト．
+                            電子書籍風アプリで，C#を例にプログラミングの学習を行える．また，アプリ中にコードを実行できる機能を搭載．
+                        </p>
+                    </li>
+                    <li>
+                        <p class="fw-bold">修論リポジトリ　（公開予定）</p>
+                        <p>
+                            JAIST主テーマ研究（修士研究）で取り組んだプロジェクト．
+                            積極的ないしは消極的な応答を行う自由対話システム．
+                        </p>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h3>論文</h3>
+                <ul>
+                    <li>吉田寛太. <span class="fw-bold">キャラクタ多様化を考慮した対話エージェントモデルの検討</span>. 2022年度 神奈川工科大学 情報学部 情報工学科 卒業論文.
+                        2023．</li>
+                    <li>吉田寛太, 白井清昭. <span class="fw-bold"><a
+                                href="https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/P8-6.pdf">積極的・消極的な性格を持つ自由対話システムの構築に向けて</a></span>.
+                        言語処理学会 第29回年次大会 発表論文集, pp.1980 - 1984. 2023.</li>
+                </ul>
+            </article>
+        </section>
 
-        <h1>研究テーマ</h1>
-        <p>自然言語処理と呼ばれる分野の研究をしています．自然言語処理は，人工知能分野の一つであり，言葉をコンピュータに理解させるための様々な技術・研究領域を指します．</p>
-        <p>その中でも最も関心があるのは，対話システムです．対話システムは人間とコンピュータが自然言語（我々が普段使っている言語）でコミュニケーションを取ることにより，様々な便利なサービスの提供を試みる分野です．近年では，Apple社のSiriやAmazon社のAmazon
-            Alexaなどが挙げられます．</p>
-        <p>詳しい研究テーマは，<a href="assets\2022-08-30_Yoshida_slide_JP.pdf">中間発表スライド</a>を参照下さい．</p>
-        <h2>極性を用いた性格付け</h2>
-        <p>
-            <center>
-                <img src="assets\proposal.png" width="50%" /><br>
-                <p>図：<a href="assets\2022-08-30_Yoshida_slide_JP.pdf">中間発表スライド</a> 9P</p>
-            </center>
-        </p>
-        <p>
-            深層学習モデルベースの対話システムでは，SNS上の対話から対話データセットを構築することで自然な対話を実現します．一方，こうしたモデルでは生成される応答に個性や一貫性が欠如する問題があります．近年はデータセットに話者の個人性や背景情報（ペルソナ）を人手で付与することで，応答に個性や一貫性を表現する手法が提案されています．私は人手によるペルソナ付与を必要とせずに，個性や一貫性を表現する自由対話システムの研究に取り組んでいます．方法論として，対話データセット中の応答文に対し極性判定を行い，同一極性の対話で応答生成モデルを学習することで，個性を持つ対話システムを実現します．
-        </p>
-        <h2>ペルソナの自動構築</h2>
-        <p>
-            近年，ペルソナを用いた自動対話システムも大きな成果を挙げています．一方，前述の通りペルソナを含むデータセットの構築は多くは人手により作成されており，そのコストは無視できないものになっています．そこで，Twitterなどのソーシャルメディア上のユーザープロファイル予測モデルを利用する事で，ユーザのプロフィール（職業，出身地）を自動推定し，対話データ中の話者のペルソナを自動で構築する方法を検討しています．
-        </p>
+        <section id="skill">
+            <h2 class="text-sm-star">スキル</h2>
+            <hr>
+            <p>※一番得意なPythonを100とした相対的スキル</p>
+            <div class="two-skills row">
+                <div id="python-skill" class="col-lg">
+                    <div class="row">
+                        <div class="col-3 d-flex justify-content-evenly">
+                            <img src="images\python-logo-only.svg" alt="" class="skill-icon">
+                        </div>
+                        <div class="col-9">
+                            <div class="skillbar" data-percent="100">
+                                <span class="skillbar-title" style="width: 0px; background: #2980b9;">Python</span>
+                                <p class="skillbar-bar" style="background: #3498db;"></p>
+                                <span class="skill-bar-percent" style="font-size: large;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="unity-skill" class="col-lg">
+                    <div class="row">
+                        <div class="col-3 d-flex justify-content-evenly">
+                            <img src="images/U_Logo_Black_RGB.png" alt="" class="skill-icon">
+                        </div>
+                        <div class="col-9">
+                            <div class="skillbar" data-percent="94">
+                                <span class="skillbar-title" style="width: 0px; background: gray;">Unity 2D</span>
+                                <p class="skillbar-bar" style="background: gray;"></p>
+                                <span class="skill-bar-percent" style="font-size: large;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <h1>参加プロジェクト</h1>
-        <h2>参加プロジェクト</h2>
-        <h3>ソフトウェア工房ゲーム制作プロジェクト</h3>
-        <p>
-            ソフトウェア工房は，神奈川工科大学が毎年予算100万円程度を出資し，学生が主体となってプロジェクトを発足させるチームです．私は学部1年生4月～2年生10月まで，「ゲーム制作プロジェクト」のプロジェクトリーダーとして活動していました．<br>
-            プロジェクトでは，毎年開催する学園祭にて自主制作ゲームを展示します．私はプログラミング経験者として参加時からプロジェクトリーダーとして，ゲーム開発の指揮を行っていました．当初はプログラミング経験者が私以外おらず，プロジェクト運営に苦戦していましたが，毎週勉強会を実施し，理解を深めることで，無事１１月の文化祭にゲームを展示することができました．文化祭では，音楽ゲームを展示し，子供から大人まで２日間で５０人程度の来場者に遊んで頂くことができました．<br>
-            ※現在は新型コロナウイルスの影響で活動が難しくなり，活動休止中です．
-        </p>
+            <div class="two-skills row">
+                <div id="c-shape-skill" class="col-lg">
+                    <div class="row">
+                        <div class="col-3 d-flex justify-content-evenly">
+                            <img src="images\c-shape.png" alt="" class="skill-icon">
+                        </div>
+                        <div class="col-9">
+                            <div class="skillbar" data-percent="78">
+                                <span class="skillbar-title" style="width: 0px; background: green;">C#</span>
+                                <p class="skillbar-bar" style="background: green;"></p>
+                                <span class="skill-bar-percent" style="font-size: large;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="pytorch-skill" class="col-lg">
+                    <div class="row">
+                        <div class="col-3 d-flex justify-content-evenly">
+                            <img src="images\pytorch-2.svg" alt="" class="skill-icon">
+                        </div>
+                        <div class="col-9">
+                            <div class="skillbar" data-percent="76">
+                                <span class="skillbar-title" style="width: 0px; background: #ee4c2c;">PyTorch</span>
+                                <p class="skillbar-bar" style="background: #ee4c2c;"></p>
+                                <span class="skill-bar-percent" style="font-size: large;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <h2>ハッカソン・データコンペ参加</h2>
-        <h3>2021.11.26 - 2021.11.28　ヤマト運輸ハッカソン</h3>
-        <p>ヤマト運輸が取り組むSDGs項目を達成するためのアイディアとプロダクトの開発．所属チームではフードロス対策として，事業者はメニュー注文量から仕入れ発注数を予測，また消費者はフードロス指標によって，フードロスが発生しそうな店舗のメニューが視覚化される．詳細は<a
-                href="https://protopedia.net/prototype/2796">https://protopedia.net/prototype/2796</a></p>
+            </div>
 
-        <h3>2021.12.13 - 2021.12.15　矢崎総業情報系3Daysオンラインインターンシップ</h3>
-        <p>沖縄県におけるある年のトラックの走行データを基に，交通量予測と渋滞緩和予測のタスク．Tableauを使って交通量の可視化，迂回ルートの提案．</p>
+            <div class="two-skills row">
+                <div id="fast-api-skill" class="col-lg">
+                    <div class="row">
+                        <div class="col-3 d-flex justify-content-evenly">
+                            <img src="images\fastapi.svg" alt="" class="skill-icon">
+                        </div>
+                        <div class="col-9">
+                            <div class="skillbar" data-percent="48">
+                                <span class="skillbar-title">Fast-API</span>
+                                <p class="skillbar-bar" style="background: #00ccb8;"></p>
+                                <span class="skill-bar-percent" style="font-size: large;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="web-skill" class="col-lg">
+                    <div class="row">
+                        <div class="col-3 d-flex justify-content-evenly">
+                            <img src="images\HTML5 Logo.svg" alt="" class="skill-icon">
+                            <img src="images\CSS3_logo_and_wordmark.svg" alt="" class="skill-icon">
+                            <img src="images\ts-logo-128.png" alt="" class="skill-icon">
+                        </div>
+                        <div class="col-9">
+                            <div class="skillbar" data-percent="42">
+                                <span class="skillbar-title" ">Web</span>
+                                <p class=" skillbar-bar" style="background: #ee4c2c;"></p>
+                                    <span class="skill-bar-percent" style="font-size: large;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <h3>2022.02.14 - 2022.02.18　ヤマト運輸データコンペ5days</h3>
-        <p>地域別配達需要予測をタスクに，XGboost，LightGBM，CatBoostによるアンサンブル学習モデルの構築．またはARIMAモデルによる時系列データ分析モデルの構築．</p>
+            <div id="four-skills">
+                <div class="row">
+                    <div class="col-3 my-2 d-flex justify-content-evenly">
+                        <img src="images\premiere-cc.svg" alt="" class="skill-icon">
+                    </div>
+                    <div class="col-3 my-2 d-flex justify-content-evenly">
+                        <img src="images\adobe-indesign-cs6.svg" alt="" class="skill-icon">
+                    </div>
+                    <div class="col-3 my-2 d-flex justify-content-evenly">
+                        <img src="images\Live2D logo square.png" alt="" class="skill-icon">
+                    </div>
+                    <div class="col-3 my-2 d-flex justify-content-evenly">
+                        <img src="images\after-effects-2019.svg" alt="" class="skill-icon">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-6">
+                        <div class="skillbar" data-percent="68">
+                            <span class="skillbar-title" style="width: 0px; background: #d291ff;">Premiere Pro</span>
+                            <p class="skillbar-bar" style="background: #d291ff;"></p>
+                            <span class="skill-bar-percent" style="font-size: large;"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="skillbar" data-percent="56">
+                            <span class="skillbar-title" style="width: 0px; background: #eb43a3;">InDesign</span>
+                            <p class="skillbar-bar" style="background: #eb43a3;"></p>
+                            <span class="skill-bar-percent" style="font-size: large;"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="skillbar" data-percent="52">
+                            <span class="skillbar-title" style="width: 0px; background: #00A9E0;">Live2D</span>
+                            <p class="skillbar-bar" style="background: #00A9E0;"></p>
+                            <span class="skill-bar-percent" style="font-size: large;"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="skillbar" data-percent="28">
+                            <span class="skillbar-title" style="width: 0px; background: #e579ff;">After Effects</span>
+                            <p class="skillbar-bar" style="background: #e579ff;"></p>
+                            <span class="skill-bar-percent" style="font-size: large;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <h3>2022.02.24 - 2022.02.25　京セラドキュメントソリューションズ冬季インターンシップ（2days）</h3>
-        <p>クラウドサービスを利用したIoTコンシェルジュサービスの開発をテーマに，DialogFlow上で擬似サービスの開発，またそのサービスの改良案のグループディスカッション，グループ発表</p>
+            <div id="four-skills">
+                <div class="row">
+                    <div class="col-3 my-2 d-flex justify-content-evenly">
+                        <img src="images\photoshop-cc-4.svg" alt="" class="skill-icon">
+                    </div>
+                    <div class="col-3 my-2 d-flex justify-content-evenly">
+                        <img src="images\adobe-illustrator-cs6.svg" alt="" class="skill-icon">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-6">
+                        <div class="skillbar" data-percent="38">
+                            <span class="skillbar-title" style="width: 0px; background: #31c5f0;">Photoshop</span>
+                            <p class="skillbar-bar" style="background: #31c5f0;"></p>
+                            <span class="skill-bar-percent" style="font-size: large;"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="skillbar" data-percent="18">
+                            <span class="skillbar-title" style="width: 0px; background: #ffaa2a;">Illustrator</span>
+                            <p class="skillbar-bar" style="background: #ffaa2a;"></p>
+                            <span class="skill-bar-percent" style="font-size: large;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+        </section>
 
-        <h1>資料</h1>
+        <section id="document">
+            <h2>経歴</h2>
+            <hr>
+            <ul>
+                <li>
+                    <a href="https://kan25d5.github.io/assets/Proposal.pdf">研究計画書</a>
+                    （22年1月時点で修士研究の計画をまとめた書類．指導教員承認済．）
+                </li>
+                <li>
+                    <a href="https://kan25d5.github.io/assets/Proposal_Slide.pdf">研究テーマスライド</a>
+                    （22年6月8日現在の修士研究の計画をまとめたスライド．）
+                </li>
+                <li>
+                    <a href="https://kan25d5.github.io/assets/2022-08-30_Yoshida_slide_JP.pdf">中間発表スライド</a>
+                    （22年8月30日現在の進捗をまとめたスライド．）
+                </li>
+            </ul>
+        </section>
 
-        <h2>文章</h2>
-        <ul>
-            <li>吉田寛太, 白井清昭. <a href="https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/P8-6.pdf">
-                    積極的・消極的な性格を持つ自由対話システムの構築に向けて.</a> 言語処理学会 第29回年次大会 発表論文集, pp.1980 - 1984. 2023.</li>
-            <li><a href="assets\Proposal.pdf">研究計画書</a>（22年1月時点で修士研究の計画をまとめた書類．指導教員承認済．）</li>
-            <li><a href="assets\Proposal_Slide.pdf">研究テーマスライド</a>（22年6月8日現在の修士研究の計画をまとめたスライド．）</li>
-            <li><a href="assets\2022-08-30_Yoshida_slide_JP.pdf">中間発表スライド</a>（22年8月30日現在の進捗をまとめたスライド．）</li>
-        </ul>
+        <section id="career">
+            <h2>経歴</h2>
+            <hr>
+            <h3>学歴</h3>
+            <ul>
+                <li class="row my-1">
+                    <div class="col-md-3">2017年4月 - 2021年3月</div>
+                    <div class="col-md-9"><a href="https://www.kait.jp/">神奈川工科大学</a> 情報学部 情報工学科 卒業</div>
+                </li>
+                <li class="row my-1">
+                    <div class="col-md-3">2021年4月 - 2023年9月</div>
+                    <div class="col-md-9"><a href="https://www.jaist.ac.jp/index.html">北陸先端科学技術大学院大学</a> 先端科学技術研究科
+                        前期博士課程
+                        修了見込み</div>
+                </li>
+            </ul>
+            <h3>職務歴</h3>
+            <ul>
+                <li class="row my-1">
+                    <div class="col-md-3">2022年9月 -2023年1月</div>
+                    <div class="col-md-9">創屋株式会社 アルバイト （Microsoft Access，MySQL）</div>
+                </li>
+                <li class="row my-1">
+                    <div class="col-md-3">2023年1月 - 2023年4月</div>
+                    <div class="col-md-9">株式会社PORTBACK アルバイト （C#）</div>
+                </li>
+                <li class="row my-1">
+                    <div class="col-md-3">2023年6月 - 2024年9月</div>
+                    <div class="col-md-9"><a href="https://freebit.com/">フリービット株式会社</a> NN技術本部R&D部門 アルバイト
+                        （Python，自然言語処理応用，研究開発）</div>
+                </li>
+                <p>※プログラマー，AIエンジニアとしての業務歴のみ</p>
+            </ul>
+        </section>
 
-        <h2>リポジトリ</h2>
-        <ul>
-            <li>
-                <a href="https://github.com/kan25d5/seq2seq-chatbot-torch">seq2seq-chatbot-torch</a>
-                <p>Transformerを用いた応答生成モデル．Twitterの発話から応答を予測するSeq2Seqモデルである．</p>
-            </li>
-            <li>
-                <a href="https://github.com/kan25d5/AyanoDiscordChatbot">AyanoDiscordChatbot</a>
-                <p>学部3年頃に開発したDiscord用のチャットボット．SVMによってユーザーの対話行為を推定し，応答を選択する．</p>
-            </li>
-        </ul>
-
-        <h1>リンク</h1>
-        <ul>
-            <li><a href="https://www.jaist.ac.jp/index.html">所属大学</a></li>
-            <li><a href="http://www.jaist.ac.jp/nlp/lab/">所属研究室</a></li>
-            <li><a href="https://github.com/kan25d5">GitHub</a></li>
-        </ul>
-    </div>
+        <section id="links">
+            <h2>リンク</h2>
+            <hr>
+            <div class="" style="width: 720px;">
+                <a class="col" href="https://twitter.com/kan25d5"><img src="images\x.svg" alt="" class="icon"></a><a
+                    class="col" href="https://bsky.app/profile/yoshikan.bsky.social"><img src="images\bluesky.jpg"
+                        alt="" class="icon"></a>
+                <a class="col" href="https://note.com/worcle_kneesocks"><img src="images\note.svg" alt=""
+                        class="icon"></a>
+                <a class="col" href="https://github.com/kan25d5"><img src="images\github-mark.svg" alt=""
+                        class="icon"></a>
+                <!-- <a class="col" href="watatumi\index.html"><img src="watatumi\images\watatsumi.png"></a>-->
+                <img src="watatumi\images\watatsumi.png">
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
